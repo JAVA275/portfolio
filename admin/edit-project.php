@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div style="display:flex;gap:.5rem;">
       <a href="/project-detail.php?id=<?= $id ?>" target="_blank"
          class="btn btn--ghost btn--sm">↗ Voir</a>
-      <a href="/admin/projects.php" class="btn btn--ghost btn--sm">← Retour</a>
+      <a href="/portfolio/admin/projects.php" class="btn btn--ghost btn--sm">← Retour</a>
     </div>
   </div>
 
@@ -159,12 +159,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
       <div class="form-actions">
         <button type="submit" class="btn btn--primary">✓ Enregistrer</button>
-        <a href="/admin/projects.php?delete=<?= $id ?>"
+        <a href="/portfolio/admin/projects.php?delete=<?= $id ?>"
            class="btn btn--danger"
            data-confirm="Supprimer définitivement ce projet ?">
           Supprimer
         </a>
-        <a href="/admin/projects.php" class="btn btn--ghost">Annuler</a>
+        <a href="/portfolio/admin/projects.php" class="btn btn--ghost">Annuler</a>
       </div>
 
     </form>

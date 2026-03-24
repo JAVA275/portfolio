@@ -35,7 +35,7 @@ $recentMessages = $db->query("SELECT * FROM messages ORDER BY created_at DESC LI
   <div class="topbar">
     <span class="topbar__title">Tableau de bord</span>
     <div class="topbar__actions">
-      <a href="/admin/add-project.php" class="btn btn--primary btn--sm">+ Nouveau projet</a>
+      <a href="/portfolio/admin/add-project.php" class="btn btn--primary btn--sm">+ Nouveau projet</a>
       <div class="topbar__user">
         <div class="topbar__avatar"><?= strtoupper(substr($_SESSION['admin_username'], 0, 1)) ?></div>
         <span><?= htmlspecialchars($_SESSION['admin_username']) ?></span>
@@ -78,7 +78,7 @@ $recentMessages = $db->query("SELECT * FROM messages ORDER BY created_at DESC LI
       <div class="table-wrapper">
         <div class="table-header">
           <span class="table-header__title">Projets récents</span>
-          <a href="/admin/projects.php" class="btn btn--ghost btn--sm">Voir tout</a>
+          <a href="/portfolio/admin/projects.php" class="btn btn--ghost btn--sm">Voir tout</a>
         </div>
         <table>
           <thead>
@@ -92,7 +92,7 @@ $recentMessages = $db->query("SELECT * FROM messages ORDER BY created_at DESC LI
             <?php foreach ($recentProjects as $p): ?>
             <tr>
               <td>
-                <a href="/admin/edit-project.php?id=<?= $p['id'] ?>"
+                <a href="/portfolio/admin/edit-project.php?id=<?= $p['id'] ?>"
                    style="color:var(--text);font-weight:500;">
                   <?= htmlspecialchars($p['title']) ?>
                 </a>
@@ -113,7 +113,7 @@ $recentMessages = $db->query("SELECT * FROM messages ORDER BY created_at DESC LI
       <div class="table-wrapper">
         <div class="table-header">
           <span class="table-header__title">Messages récents</span>
-          <a href="/admin/messages.php" class="btn btn--ghost btn--sm">Voir tout</a>
+          <a href="/portfolio/admin/messages.php" class="btn btn--ghost btn--sm">Voir tout</a>
         </div>
         <table>
           <thead>
@@ -127,7 +127,7 @@ $recentMessages = $db->query("SELECT * FROM messages ORDER BY created_at DESC LI
             <?php foreach ($recentMessages as $m): ?>
             <tr>
               <td>
-                <a href="/admin/message-view.php?id=<?= $m['id'] ?>"
+                <a href="/portfolio/admin/message-view.php?id=<?= $m['id'] ?>"
                    style="color:var(--text);font-weight:500;">
                   <?= htmlspecialchars($m['name']) ?>
                 </a>
@@ -154,10 +154,10 @@ $recentMessages = $db->query("SELECT * FROM messages ORDER BY created_at DESC LI
         Actions rapides
       </p>
       <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
-        <a href="/admin/add-project.php"  class="btn btn--primary btn--sm">+ Ajouter un projet</a>
-        <a href="/admin/skills.php"       class="btn btn--ghost btn--sm">⚡ Gérer les compétences</a>
-        <a href="/admin/profile.php"      class="btn btn--ghost btn--sm">👤 Modifier le profil</a>
-        <a href="/admin/messages.php"     class="btn btn--ghost btn--sm">✉ Voir les messages</a>
+        <a href="/portfolio/admin/add-project.php"  class="btn btn--primary btn--sm">+ Ajouter un projet</a>
+        <a href="/portfolio/admin/skills.php"       class="btn btn--ghost btn--sm">⚡ Gérer les compétences</a>
+        <a href="/portfolio/admin/profile.php"      class="btn btn--ghost btn--sm">👤 Modifier le profil</a>
+        <a href="/portfolio/admin/messages.php"     class="btn btn--ghost btn--sm">✉ Voir les messages</a>
         <a href="/portfolio/" target="_blank"       class="btn btn--ghost btn--sm">↗ Voir le site</a>
       </div>
     </div>

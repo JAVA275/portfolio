@@ -59,8 +59,8 @@ $messages = $db->query("SELECT * FROM messages ORDER BY created_at DESC")->fetch
             </td>
             <td>
               <div class="d-flex gap-1">
-                <a href="/admin/message-view.php?id=<?= $m['id'] ?>" class="btn btn--ghost btn--sm">Lire</a>
-                <a href="/admin/messages.php?delete=<?= $m['id'] ?>"
+                <a href="/portfolio/admin/message-view.php?id=<?= $m['id'] ?>" class="btn btn--ghost btn--sm">Lire</a>
+                <a href="/portfolio/admin/messages.php?delete=<?= $m['id'] ?>"
                    class="btn btn--danger btn--sm"
                    data-confirm="Supprimer ce message ?">✕</a>
               </div>

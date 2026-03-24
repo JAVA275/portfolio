@@ -13,31 +13,31 @@ $current = basename($_SERVER['PHP_SELF']);
   <nav class="sidebar__nav">
     <p class="sidebar__section">Principal</p>
 
-    <a href="/admin/dashboard.php"
+    <a href="/portfolio/admin/dashboard.php"
        class="sidebar__link <?= $current === 'dashboard.php' ? 'active' : '' ?>">
       <span class="icon">⊞</span> Tableau de bord
     </a>
 
     <p class="sidebar__section">Contenu</p>
 
-    <a href="/admin/projects.php"
+    <a href="/portfolio/admin/projects.php"
        class="sidebar__link <?= in_array($current, ['projects.php','add-project.php','edit-project.php']) ? 'active' : '' ?>">
       <span class="icon">◈</span> Projets
     </a>
 
-    <a href="/admin/skills.php"
+    <a href="/portfolio/admin/skills.php"
        class="sidebar__link <?= $current === 'skills.php' ? 'active' : '' ?>">
       <span class="icon">⚡</span> Compétences
     </a>
 
-    <a href="/admin/profile.php"
+    <a href="/portfolio/admin/profile.php"
        class="sidebar__link <?= $current === 'profile.php' ? 'active' : '' ?>">
       <span class="icon">👤</span> Profil
     </a>
 
     <p class="sidebar__section">Communication</p>
 
-    <a href="/admin/messages.php"
+    <a href="/portfolio/admin/messages.php"
        class="sidebar__link <?= in_array($current, ['messages.php','message-view.php']) ? 'active' : '' ?>">
       <span class="icon">✉</span> Messages
       <?php if ($unread > 0): ?>
@@ -57,7 +57,7 @@ $current = basename($_SERVER['PHP_SELF']);
       <span class="icon">↗</span> Voir le site
     </a>
 
-    <a href="/admin/logout.php" class="sidebar__link"
+    <a href="/portfolio/admin/logout.php" class="sidebar__link"
        style="color:var(--danger);">
       <span class="icon">⊗</span> Déconnexion
     </a>

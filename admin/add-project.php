@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <main class="main">
   <div class="topbar">
     <span class="topbar__title">Ajouter un projet</span>
-    <a href="/admin/projects.php" class="btn btn--ghost btn--sm">← Retour</a>
+    <a href="/portfolio/admin/projects.php" class="btn btn--ghost btn--sm">← Retour</a>
   </div>
 
   <div class="content">
@@ -143,7 +143,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit" class="btn btn--primary">
           ✓ Enregistrer le projet
         </button>
-        <a href="/admin/projects.php" class="btn btn--ghost">Annuler</a>
+        <a href="/portfolio/admin/projects.php" class="btn btn--ghost">Annuler</a>
       </div>
 
     </form>

@@ -28,7 +28,7 @@ $db->prepare("UPDATE messages SET is_read = 1 WHERE id = ?")->execute([$id]);
 <main class="main">
   <div class="topbar">
     <span class="topbar__title">Message de <?= htmlspecialchars($msg['name']) ?></span>
-    <a href="/admin/messages.php" class="btn btn--ghost btn--sm">← Retour</a>
+    <a href="/portfolio/admin/messages.php" class="btn btn--ghost btn--sm">← Retour</a>
   </div>
   <div class="content">
     <h1 class="page-title">Message reçu</h1>
@@ -47,7 +47,7 @@ $db->prepare("UPDATE messages SET is_read = 1 WHERE id = ?")->execute([$id]);
       <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);display:flex;gap:.75rem;">
         <a href="mailto:<?= htmlspecialchars($msg['email']) ?>?subject=Re: <?= urlencode($msg['subject'] ?: 'Votre message') ?>"
            class="btn btn--primary btn--sm">↩ Répondre par email</a>
-        <a href="/admin/messages.php?delete=<?= $msg['id'] ?>"
+        <a href="/portfolio/admin/messages.php?delete=<?= $msg['id'] ?>"
            class="btn btn--danger btn--sm" data-confirm="Supprimer ce message ?">Supprimer</a>
       </div>
     </div>

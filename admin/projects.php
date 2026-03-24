@@ -35,7 +35,7 @@ $projects = $db->query("SELECT * FROM projects ORDER BY created_at DESC")->fetch
 <main class="main">
   <div class="topbar">
     <span class="topbar__title">Projets</span>
-    <a href="/admin/add-project.php" class="btn btn--primary btn--sm">+ Nouveau projet</a>
+    <a href="/portfolio/admin/add-project.php" class="btn btn--primary btn--sm">+ Nouveau projet</a>
   </div>
 
   <div class="content">
@@ -93,9 +93,9 @@ $projects = $db->query("SELECT * FROM projects ORDER BY created_at DESC")->fetch
               <div class="d-flex gap-1">
                 <a href="/project-detail.php?id=<?= $p['id'] ?>"
                    class="btn btn--ghost btn--sm btn--icon" target="_blank" title="Voir">↗</a>
-                <a href="/admin/edit-project.php?id=<?= $p['id'] ?>"
+                <a href="/portfolio/admin/edit-project.php?id=<?= $p['id'] ?>"
                    class="btn btn--ghost btn--sm">Modifier</a>
-                <a href="/admin/projects.php?delete=<?= $p['id'] ?>"
+                <a href="/portfolio/admin/projects.php?delete=<?= $p['id'] ?>"
                    class="btn btn--danger btn--sm"
                    data-confirm="Supprimer « <?= htmlspecialchars($p['title']) ?> » ?">
                   Suppr.

@@ -116,9 +116,9 @@ foreach ($skills as $s) $byCategory[$s['category']][] = $s;
                   <td class="text-muted"><?= $s['sort_order'] ?></td>
                   <td>
                     <div class="d-flex gap-1">
-                      <a href="/admin/skills.php?edit=<?= $s['id'] ?>"
+                      <a href="/portfolio/admin/skills.php?edit=<?= $s['id'] ?>"
                          class="btn btn--ghost btn--sm">Modifier</a>
-                      <a href="/admin/skills.php?delete=<?= $s['id'] ?>"
+                      <a href="/portfolio/admin/skills.php?delete=<?= $s['id'] ?>"
                          class="btn btn--danger btn--sm"
                          data-confirm="Supprimer « <?= htmlspecialchars($s['name']) ?> » ?">
                         ✕
@@ -184,7 +184,7 @@ foreach ($skills as $s) $byCategory[$s['category']][] = $s;
               <?= $editSkill ? '✓ Enregistrer' : '+ Ajouter' ?>
             </button>
             <?php if ($editSkill): ?>
-            <a href="/admin/skills.php" class="btn btn--ghost btn--sm">Annuler</a>
+            <a href="/portfolio/admin/skills.php" class="btn btn--ghost btn--sm">Annuler</a>
             <?php endif; ?>
           </div>
         </form>
