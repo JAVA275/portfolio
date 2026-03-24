@@ -1,0 +1,19 @@
+RewriteEngine On
+RewriteBase /portfolio/
+
+# Autoriser l'accès aux fichiers statiques réels (css, js, images)
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Rediriger TOUT le reste vers index.php (même si un dossier du même nom existe)
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+# Sécurité — cacher les fichiers sensibles
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "\.(env|ini|log|sql|bak|config)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
